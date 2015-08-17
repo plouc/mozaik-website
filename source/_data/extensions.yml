@@ -1,0 +1,64 @@
+- name:        mozaik-ext-github
+  description: Github widgets for Mozaïk.
+  link:        https://github.com/plouc/mozaik-ext-github
+  travis:      plouc/mozaik-ext-github
+  tags:
+    - github
+
+- name:        mozaik-ext-travis
+  description: Travis widgets for Mozaïk
+  link:        https://github.com/plouc/mozaik-ext-travis
+  travis:      plouc/mozaik-ext-travis
+  tags:
+    - travis
+    - ci
+
+- name:        mozaik-ext-time
+  description: Time widgets for Mozaïk.
+  link:        https://github.com/plouc/mozaik-ext-time
+  travis:      plouc/mozaik-ext-time
+  tags:
+    - time
+
+- name:        mozaik-ext-weather
+  description: Weather widgets for Mozaïk.
+  link:        https://github.com/plouc/mozaik-ext-weather
+  travis:      plouc/mozaik-ext-weather
+  tags:
+    - weather
+
+- name:        mozaik-ext-jenkins
+  description: Jenkins widgets for Mozaïk.
+  link:        https://github.com/plouc/mozaik-ext-jenkins
+  travis:      plouc/mozaik-ext-jenkins
+  tags:
+    - jenkins
+    - ci
+
+- name:        mozaik-ext-heroku
+  description: Heroku widgets for Mozaïk.
+  link:        https://github.com/plouc/mozaik-ext-heroku
+  travis:      plouc/mozaik-ext-heroku
+  tags:
+    - heroku
+    - deploy
+
+- name:        mozaik-ext-analytics
+  description: Google analytics widgets for Mozaïk.
+  link:        https://github.com/SC5/mozaik-ext-analytics
+  tags:
+    - google
+    - analytics
+
+- name:        mozaik-ext-calendar
+  description: Google calendar widgets for Mozaïk.
+  link:        https://github.com/SC5/mozaik-ext-analytics
+  tags:
+    - google
+    - calendar
+
+- name:        mozaik-ext-bamboo
+  description: Bamboo widgets for Mozaïk.
+  link:        https://github.com/swissmanu/mozaik-ext-bamboo
+  tags:
+    - bamboo

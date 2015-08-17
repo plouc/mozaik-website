@@ -1,0 +1,23 @@
+<div class="sub-header">
+    <div class="wrapper">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="page-baseline">Extend Mozaïk with custom extensions</div>
+    </div>
+</div>
+<div id="content-wrap">
+    <div class="wrapper">
+        <div class="inner">
+            <div>
+                <strong>Mozaïk</strong> widgets are maintained as separate modules,
+                available as mozaik-ext-&lt;name&gt; npm module.
+                Below is a list of some already existing extensions.
+            </div>
+            <div class="extensions">
+                {% for extension in _.sortBy(site.data[page.data], 'name') %}
+                    {{ partial('partial/' + page.partial, { extension: extension }) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<script>window.SEARCH_INDEX = {{ lunr_index_extensions(site.data.extensions) }}</script>

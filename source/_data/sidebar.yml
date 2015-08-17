@@ -1,0 +1,30 @@
+docs:
+  'Getting started':
+    Setup: index.html
+  Configuration:
+    'config.js':   config-file.html
+    'Grid system': grid-system.html
+    Theme:         theme.html
+    Widgets:       widgets.html
+
+api:
+  core:
+    overview: index.html
+    events: events.html
+    locals: locals.html
+    router: router.html
+    box: box.html
+    rendering: rendering.html
+    posts: posts.html
+    scaffolds: scaffolds.html
+    themes: themes.html
+  extensions:
+    console: console.html
+    deployer: deployer.html
+    filter: filter.html
+    generator: generator.html
+    helper: helper.html
+    migrator: migrator.html
+    processor: processor.html
+    renderer: renderer.html
+    tag: tag.html
