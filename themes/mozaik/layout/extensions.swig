@@ -7,9 +7,9 @@
 <div id="content-wrap">
     <div class="wrapper">
         <div class="inner">
-            <div>
+            <div class="extensions_intro">
                 <strong>Mozaïk</strong> widgets are maintained as separate modules,
-                available as mozaik-ext-&lt;name&gt; npm module.
+                available as mozaik-ext-&lt;name&gt; npm packages.<br/>
                 Below is a list of some already existing extensions.
             </div>
             <div class="extensions">
