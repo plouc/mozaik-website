@@ -8,7 +8,7 @@ header-padding-max    = 30px
   right 0
   left  0
   background #a2e7da
-  box-shadow 0 1px 1px rgba(0, 0, 0, 0.15)
+  //box-shadow 0 1px 1px rgba(0, 0, 0, 0.15)
   height header-height
   @media print
     display none
@@ -42,6 +42,7 @@ header-padding-max    = 30px
 
 .main-nav_item
   display inline-block
+  position relative
 
   &-demo
     margin-left 10px
@@ -59,15 +60,19 @@ header-padding-max    = 30px
   padding 0 15px
   line-height header-height
 
+  &:hover
+    color #000
+
+  &._is-active
+    background #333
+    color color-mint
+    //box-shadow 0 3px 2px #000 inset
+
   &-demo
     line-height (header-height - 20px)
     background #333
     color color-mint
     border-radius 2px
-
-  &:hover
-    color #000
-    background lighten(color-mint, 7)
 
 #search-btn-wrap
   display: none

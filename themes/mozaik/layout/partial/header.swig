@@ -1,14 +1,14 @@
 <header id="header">
     <div id="header-inner" class="wrapper">
         <h1 id="logo-wrap">
-            <a href="{{ url_for('/') }}" id="logo">Mozaïk</a>
+            <a href="{{ config.root }}" id="logo">Mozaïk</a>
         </h1>
         {% spaceless %}
         <nav class="main-nav">
             <ul>
                 {% for link in site.data.menu %}
                     <li class="main-nav_item">
-                        <a href="{{ url_for(link) }}" class="main-nav_link">{{ loop.key }}</a>
+                        <a href="{{ url_for(link) }}" class="main-nav_link{% if is_current(link) %}{{ ' _is-active' }}{% endif %}">{{ loop.key }}</a>
                     </li>
                 {% endfor %}
                 <li class="main-nav_item">
