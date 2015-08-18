@@ -6,6 +6,9 @@
   flex-wrap wrap
   justify-content space-between
 
+  @media mq-mobile
+    justify-content space-around
+
   &_intro
     margin 20px -20px 0 -20px
     text-align left
@@ -35,6 +38,7 @@
 
   &_name
     font-family font-title
+    position relative
     font-weight bold
     color #333
     background color-mint
@@ -43,8 +47,18 @@
     line-height 1
     padding 13px 20px
     display block
+
+    img
+      position absolute
+      top   13px
+      right 20px
+
+  &_link
+    color #444
+    line-height 1em
+    text-decoration none
+
     &:hover
-      background lighten(color-mint, 5)
       color #000
 
   &_desc
@@ -55,7 +69,7 @@
     clearfix()
     border-top 1px solid #222
     line-height 1em
-    padding 7px 20px
+    padding 7px 20px 10px 20px
 
   &_tag
     color color-mint
