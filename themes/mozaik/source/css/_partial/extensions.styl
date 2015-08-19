@@ -1,5 +1,5 @@
 .extensions
-  margin 20px -20px
+  margin 30px -20px
   display flex
   flex-flow row wrap
   flex-direction row
@@ -10,14 +10,15 @@
     justify-content space-around
 
   &_intro
-    margin 20px -20px 0 -20px
+    margin 30px -20px 0 -20px
     text-align left
     font-weight 700
+    padding-left 20px
+    border-left 3px solid #71cff2
 
 .extension
-  background #333
-  color #ddd
-  box-shadow 0 1px 1px rgba(0, 0, 0, 0.35)
+  background #fff
+  box-shadow 0 1px 1px rgba(0, 0, 0, 0.25)
   margin-bottom 20px
   border-radius 2px
 
@@ -41,12 +42,13 @@
     position relative
     font-weight bold
     color #333
-    background color-mint
+    background #fafafa
     font-size 18px
     text-decoration none
     line-height 1
     padding 13px 20px
     display block
+    border-radius 2px 2px 0 0
 
     img
       position absolute
@@ -67,17 +69,17 @@
 
   &_tags
     clearfix()
-    border-top 1px solid #222
+    border-top 1px solid #eee
     line-height 1em
     padding 7px 20px 10px 20px
 
   &_tag
-    color color-mint
+    color #999
     font-size 0.9em
     text-decoration none
     display inline-block
     margin-right 10px
     &:hover
-      color #fff
+      color #555
     &:before
       content "#"

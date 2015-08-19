@@ -31,16 +31,16 @@ hexo.extend.helper.register('page_nav', function () {
 
     if (index > 0) {
         result.push([
-            '<a href="' + keys[index - 1] + '" class="article-footer-prev" title="' + this.__(prefix + list[keys[index - 1]]) + '">',
-                '<i class="fa fa-chevron-left"></i><span>' + this.__('page.prev') + '</span>',
+            '<a href="' + keys[index - 1] + '" class="article-footer-prev" title="' + list[keys[index - 1]] + '">',
+                '<i class="fa fa-chevron-left"></i><span>' + list[keys[index - 1]] + '</span>',
             '</a>'
         ].join(''));
     }
 
     if (index < keys.length - 1) {
         result.push([
-            '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + this.__(prefix + list[keys[index + 1]]) + '">',
-                '<span>' + this.__('page.next') + '</span><i class="fa fa-chevron-right"></i>',
+            '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + list[keys[index + 1]] + '">',
+                '<span>' + list[keys[index + 1]] + '</span><i class="fa fa-chevron-right"></i>',
             '</a>'
         ].join(''));
     }

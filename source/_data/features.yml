@@ -2,11 +2,11 @@
   icon:  arrows-alt
   description: |
     **Mozaïk** dashboards support multiple devices through adaptive layout.
-    You can put a big screen in the open space or consult your dashboard on your smartphone.
+    You can either put your dashboard on a big screen in the open space, or consult it on your smartphone.
 
 - title: Themes support
   icon:  paint-brush
-  link:  docs/theme.html
+  link:  themes
   description: |
     **Mozaïk** dashboard comes with 5 themes and makes it easy to develop your own theme.
 
@@ -20,14 +20,14 @@
   icon:  th
   link:  docs/grid-system.html
   description: |
-    **Mozaïk** provides a simple way to define dashboard layout using a grid system.
+    **Mozaïk** provides a simple way to define your dashboard layout using a grid system.
 
 - title: Optimized backend communication
   icon:  exchange
   description: |
-    Most extensions need to communicate with APIs, **Mozaïk** ease this by providing a backend which handles API calls and push data to widgets through websocket.
+    Most extensions need to communicate with APIs. **Mozaïk** eases this by providing a backend, which handles API calls and pushes data to widgets through websockets.
 
 - title: Multi dashboards
   icon:  clone
   description: |
-    Sometimes, a single dashboard is not enough, **Mozaïk** allows multi dashboards with smooth transition.
+    Sometimes, a single dashboard is not enough. **Mozaïk** allows multiple dashboards with a smooth transition.

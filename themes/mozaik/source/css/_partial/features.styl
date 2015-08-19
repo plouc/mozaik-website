@@ -17,9 +17,9 @@
     text-transform uppercase
 
 .feature
-  background #333
-  color #ddd
-  box-shadow 0 1px 1px rgba(0, 0, 0, 0.35)
+  background #fff
+  overflow hidden
+  box-shadow 0 1px 1px rgba(0, 0, 0, 0.25)
   margin-bottom 20px
   border-radius 2px
 
@@ -42,38 +42,40 @@
     font-family font-title
     font-weight bold
     color #333
-    background color-mint
+    background #fafafa
     font-size 18px
     text-decoration none
     line-height 1
     padding 13px 20px
     display block
     position relative
+    border-radius 2px 2px 0 0
 
     .fa
       position absolute
       top   12px
       right 12px
       margin-right 7px
+      color #08aeec
 
   &_more
     display inline-block
-    border 2px solid color-mint
+    border 2px solid color-link
     line-height 1em
     padding 3px 7px
     font-size 13px
     font-weight 700
-    color color-mint
+    color color-link
     text-decoration none
 
     &:hover
-      background-color darken(color-mint, 10)
-      border-color     darken(color-mint, 10)
-      color #333
+      background-color color-link
+      color #fff
 
   &_desc
     padding 10px 15px 15px 15px
+    line-height 1.8em
 
     strong
       font-weight 700
-      color color-mint
+      color color-link

@@ -10,7 +10,7 @@
             <h2 class="features_title">Features</h2>
             {{ partial('partial/features') }}
             <div id="intro-get-started-wrap">
-                <a href="docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
+                <a href="docs/" id="intro-get-started-link">getting started</a>
             </div>
         </div>
     </div>

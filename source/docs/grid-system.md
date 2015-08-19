@@ -2,7 +2,7 @@ title: Configuration
 baseline: Configure Mozaïk grid system
 comments: false
 ---
-Mozaïk provide a simple way to define dashboard layout
+As we saw previously in the [config.js](/mozaik/docs/config-file.html) section, **Mozaïk** provides a simple way to define dashboard layout. Let's see how it works.
 
 
 To configure a layout like this:
@@ -28,32 +28,34 @@ To configure a layout like this:
 You should have the following config:
 
 ``` javascript
-  dashboards: [
-    {
-      columns: 3,
-      rows:    2,
-      widgets: [
-        { // A
-          type: 'whatever',
-          columns: 1, rows: 1,
-          x: 0, y: 0
-        },
-        { // B
-          type: 'whatever',
-          columns: 2, rows: 1,
-          x: 1, y: 0
-        },
-        { // C
-          type: 'whatever',
-          columns: 2, rows: 1,
-          x: 0, y: 1
-        },
-        { // D
-          type: 'whatever',
-          columns: 1, rows: 1,
-          x: 2, y: 1
+{
+    //...
+    dashboards: [
+        {
+            columns: 3, rows: 2,
+            widgets: [
+                {
+                    type: 'whatever',
+            /* A */ columns: 1, rows: 1,
+                    x: 0, y: 0
+                },
+                {
+                    type: 'whatever',
+            /* B */ columns: 2, rows: 1,
+                    x: 1, y: 0
+                },
+                {
+                    type: 'whatever',
+            /* C */ columns: 2, rows: 1,
+                    x: 0, y: 1
+                },
+                {
+                    type: 'whatever',
+            /* D */ columns: 1, rows: 1,
+                    x: 2, y: 1
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
+}
 ```

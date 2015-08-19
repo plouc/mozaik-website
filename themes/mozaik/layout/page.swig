@@ -17,7 +17,7 @@
                 {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ 'Last updated: ' + date(page.updated) }}</time>
                 {{ page_nav() }}
               </footer>
               {{ partial('partial/comment') }}
@@ -25,9 +25,9 @@
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              <strong class="sidebar-title">Contents</strong>
               {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <a href="#" id="article-toc-top">Back to top</a>
             </div>
           </aside>
         </div>

@@ -4,7 +4,7 @@ comments: false
 ---
 ## Sample Repo
 
-The easy way to get started is using the demo dashboard, [repository](https://github.com/plouc/mozaik-demo).
+The easiest way to get started is by using the [demo dashboard](https://github.com/plouc/mozaik-demo).
 
 ### Clone the repo
 

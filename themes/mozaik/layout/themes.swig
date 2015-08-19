@@ -8,6 +8,10 @@
 </div>
 <div id="content-wrap">
     <div id="content" class="wrapper">
+      <div class="themes_intro">
+          <strong>Mozaïk</strong> dashboard comes with 5 themes and makes it easy to develop your own theme.<br/>
+          Below is a gallery of provided themes.
+      </div>
         <div class="themes">
             {% for theme in site.data.themes %}
                 <div class="theme">
