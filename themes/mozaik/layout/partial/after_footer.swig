@@ -1,5 +1,9 @@
 <!-- Scripts -->
 <!-- build:js build/js/main.js -->
+{{ js('js/jquery-2.1.4.js') }}
+{{ js('js/jquery.waypoints.js') }}
+{{ js('js/sticky.js') }}
+{{ js('js/inview.js') }}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
 <!-- endbuild -->

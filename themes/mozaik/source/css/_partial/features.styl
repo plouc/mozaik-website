@@ -1,5 +1,7 @@
+feature-pic-size = 180px
+
 .features
-  margin 0 -20px 30px -20px
+  margin 0 0 30px 0
   display flex
   flex-flow row wrap
   flex-direction row
@@ -13,45 +15,68 @@
     font-family font-title
     font-weight 700
     font-size 24px
-    margin 30px -20px 20px -20px
+    margin 30px 0 20px 0
     text-transform uppercase
 
 .feature
-  background #fff
-  overflow hidden
-  box-shadow 0 1px 1px rgba(0, 0, 0, 0.25)
-  margin-bottom 20px
+  position relative
+  //background #fff
+  //box-shadow 0 1px 1px rgba(0, 0, 0, 0.25)
+  margin-bottom 40px
   border-radius 2px
+  padding-left (feature-pic-size + 20px)
+  min-height feature-pic-size
+
+  flex-grow   0
+  flex-shrink 0
 
   @media mq-mobile
-    flex-grow   0
-    flex-shrink 0
-    flex-basis  94%
+    padding-left 0
+    flex-basis 100%
+    padding-bottom 20px
 
   @media mq-tablet
-    flex-grow   0
-    flex-shrink 0
-    flex-basis  94%
+    flex-basis 100%
 
   @media mq-normal
-    flex-grow   0
-    flex-shrink 0
-    flex-basis  49%
+    flex-basis 48%
+
+  &_pic
+    position absolute
+    top  0
+    left 0
+    display block
+    width  feature-pic-size
+    height feature-pic-size
+
+    @media mq-mobile
+      position relative
+      width 100%
+      text-align center
+      margin-bottom 12px
+
+    img
+      width  feature-pic-size
+      height feature-pic-size
+      background-color #8ad7f4
 
   &_title
     font-family font-title
     font-weight bold
     color #333
-    background #fafafa
     font-size 18px
     text-decoration none
     line-height 1
-    padding 13px 20px
+    padding-top 3px
     display block
     position relative
-    border-radius 2px 2px 0 0
+
+    @media mq-mobile
+      padding-bottom 12px
+      border-bottom 1px solid #ccc
 
     .fa
+      display none
       position absolute
       top   12px
       right 12px
@@ -73,8 +98,11 @@
       color #fff
 
   &_desc
-    padding 10px 15px 15px 15px
+    margin-top 12px
     line-height 1.8em
+
+    p
+      display inline
 
     strong
       font-weight 700

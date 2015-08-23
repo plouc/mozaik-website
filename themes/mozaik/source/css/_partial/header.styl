@@ -1,7 +1,7 @@
 header-padding-normal = 10px
 header-padding-max    = 30px
 
-#header
+.header
   position fixed
   z-index 200
   top   0
@@ -14,9 +14,6 @@ header-padding-max    = 30px
     display none
   .home &
     padding header-padding-max 0
-
-#header-inner
-  position relative
 
 #logo-wrap
   text-align: center
@@ -61,7 +58,7 @@ header-padding-max    = 30px
   transition all 200ms
 
   &:hover
-    color #08aeec
+    color color-link
 
   &._is-active
     color #000
@@ -69,9 +66,12 @@ header-padding-max    = 30px
 
   &-demo
     line-height (header-height - 20px)
-    background #08aeec
+    background color-link
     color #fff
     border-radius 2px
+    &:hover
+      background #fff
+      color color-link
 
 #search-btn-wrap
   display: none

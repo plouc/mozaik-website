@@ -1,12 +1,14 @@
-<div class="sub-header">
-    <div class="wrapper">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <div class="page-baseline">Extend Mozaïk with custom extensions</div>
+<div class="strata_out sub-header">
+    <div class="strata">
+        <div class="strata_in">
+            <h1 class="page-title">{{ page.title }}</h1>
+            <div class="page-baseline">Extend Mozaïk with custom extensions</div>
+        </div>
     </div>
 </div>
-<div id="content-wrap">
-    <div class="wrapper">
-        <div class="inner">
+<div class="strata_out page_content">
+    <div class="strata">
+        <div class="strata_in">
             <div class="extensions_intro">
                 <strong>Mozaïk</strong> widgets are maintained as separate modules,
                 available as mozaik-ext-&lt;name&gt; npm packages.<br/>

@@ -32,7 +32,7 @@ hexo.extend.helper.register('page_nav', function () {
     if (index > 0) {
         result.push([
             '<a href="' + keys[index - 1] + '" class="article-footer-prev" title="' + list[keys[index - 1]] + '">',
-                '<i class="fa fa-chevron-left"></i><span>' + list[keys[index - 1]] + '</span>',
+                '<i class="fa fa-angle-left"></i><span>' + list[keys[index - 1]] + '</span>',
             '</a>'
         ].join(''));
     }
@@ -40,7 +40,7 @@ hexo.extend.helper.register('page_nav', function () {
     if (index < keys.length - 1) {
         result.push([
             '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + list[keys[index + 1]] + '">',
-                '<span>' + list[keys[index + 1]] + '</span><i class="fa fa-chevron-right"></i>',
+                '<span>' + list[keys[index + 1]] + '</span><i class="fa fa-angle-right"></i>',
             '</a>'
         ].join(''));
     }
@@ -50,7 +50,8 @@ hexo.extend.helper.register('page_nav', function () {
 
 
 hexo.extend.helper.register('doc_sidebar', function (className) {
-    var type    = this.page.canonical_path.split('/')[0];
+    var page    = this.page;
+    var type    = page.canonical_path.split('/')[0];
     var sidebar = this.site.data.sidebar[type];
     var path    = pathFn.basename(this.path);
     var result  = '';
@@ -67,6 +68,12 @@ hexo.extend.helper.register('doc_sidebar', function (className) {
             }
 
             result += '<a href="' + link + '" class="' + itemClass + '">' + text + '</a>';
+
+            if (link === path) {
+                result += self.toc(page.content, {
+                    list_number: false
+                });
+            }
         })
     });
 

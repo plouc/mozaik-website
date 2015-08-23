@@ -12,9 +12,8 @@ note-warn = hsl(0, 100%, 50%)
     margin-left: sidebar-width
 
 .article-container
-  @media mq-normal
-    float: right
-    width: 100%
+  float left
+  width 78%
 
 .article-inner
   clearfix()
@@ -28,47 +27,36 @@ note-warn = hsl(0, 100%, 50%)
   @media print
     padding: 0
 
-#article-toc
-  display: none
-  float: right
-  width: sidebar-width
-  margin-right: sidebar-width * -1
-  opacity: 0.8
-  @media mq-normal
-    display: block
-  &.fixed
-    position: absolute
-    top: 0
-    bottom: 0
-    right: sidebar-width
+.toc
+  font-size 15px
+  color #666
 
-#article-toc-inner
-  @extend .inner
-  overflow-x: hidden
-  overflow-y: auto
-  width: sidebar-width
-  .fixed &
-    position: fixed
-    top: 0
-    bottom: 0
+  &-item
+    &.toc-level-1 > .toc-link
+      padding-left 5px
+    &.toc-level-2 > .toc-link
+      padding-left 15px
+    &.toc-level-3 > .toc-link
+      padding-left 30px
+    &.toc-level-4 > .toc-link
+      padding-left 45px
 
-.toc-link
-  @extend .sidebar-link
+  &-link
+    border-left 3px solid #f5f5f5
+    text-decoration none
+    color inherit
+    display block
+    line-height 1em
+    padding 7px 0
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
 
-.toc-child
-  padding-left: 1em
-  font-size: 0.9em
+    &._is-current
+      border-color color-link
 
-#article-toc-top
-  margin-top: 2em
-  font-size: 0.9em
-  text-decoration: none
-  color: color-default
-  display: block
-  margin-bottom: 40px
-  font-family: font-title
-  &:hover
-    color: color-link-hover
+    &:hover
+      color color-link
 
 .article-header
   clearfix()
@@ -218,18 +206,16 @@ note-warn = hsl(0, 100%, 50%)
     display: none
 
 $article-footer-link
-  color: color-link
-  text-decoration: none
-  font-weight: bold
-  font-family: font-title
-  text-transform: uppercase
-  position: absolute
+  color color-link
+  text-decoration none
+  font-family font-title
+  position absolute
   &:hover
-    color: color-link-hover
+    color color-link-hover
   @media print
-    display: none
+    display none
   span
-    padding: 0 6px
+    padding 0 6px
 
 .article-footer-prev
   @extend $article-footer-link
@@ -241,6 +227,9 @@ $article-footer-link
 
 .article-footer-updated
   font-size: 0.9em
+
+  @media mq-mobile
+    display none
 
 #comments
   @media print

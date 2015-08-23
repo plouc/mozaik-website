@@ -7,7 +7,7 @@
       </li>
     </ul>
     {% if page.layout == 'page' %}
-      {{ doc_sidebar('mobile-nav') }}
+        {{ doc_sidebar('mobile-nav') }}
     {% endif %}
   </div>
 </nav>
