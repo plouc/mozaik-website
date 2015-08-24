@@ -12,11 +12,17 @@ feature-pic-size = 180px
     justify-content space-around
 
   &_title
+    //text-align center
     font-family font-title
     font-weight 700
-    font-size 24px
-    margin 30px 0 20px 0
+    font-size 22px
+    margin 30px 0 30px 0
+    padding-bottom 15px
     text-transform uppercase
+    border-bottom 1px solid color-border
+
+    @media mq-mobile
+      text-align center
 
 .feature
   position relative
@@ -58,7 +64,7 @@ feature-pic-size = 180px
     img
       width  feature-pic-size
       height feature-pic-size
-      background-color #8ad7f4
+      //background-color #8ad7f4
 
   &_title
     font-family font-title

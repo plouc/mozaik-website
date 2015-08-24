@@ -7,28 +7,42 @@ header-padding-max    = 30px
   top   0
   right 0
   left  0
-  background #fff
-  box-shadow 0 1px 1px rgba(0, 0, 0, 0.2)
+  background #13aae3
+  color      #fff
   height header-height
+  //transition 200ms
+
   @media print
     display none
+
   .home &
     padding header-padding-max 0
 
+  &_compact
+    background #fff
+    color      #777
+    box-shadow 0 1px 1px rgba(0, 0, 0, 0.2)
+
+    .header_logo
+      background-image url("/mozaik/mozaik-logo.png")
+
+    .main-nav_link._is-active
+      color #000
+
+  &_logo
+    hide-text()
+    background-image url("/mozaik/mozaik-logo-white.png")
+    background-repeat no-repeat
+    background-position 0 10px
+    background-size contain
+    width  logo-width
+    height header-height
+    display inline-block
+    @media mq-normal
+      float left
+
 #logo-wrap
   text-align: center
-
-#logo
-  hide-text()
-  background url("/mozaik/mozaik-logo.png")
-  background-repeat no-repeat
-  background-position 0 10px
-  background-size contain
-  width  logo-width
-  height header-height
-  display inline-block
-  @media mq-normal
-    float left
 
 .main-nav
   display none
@@ -46,7 +60,7 @@ header-padding-max    = 30px
     padding 10px 0 0 0
 
 .main-nav_link
-  color #777
+  color inherit
   text-decoration none
   font-family font-title
   font-size   14px
@@ -61,51 +75,14 @@ header-padding-max    = 30px
     color color-link
 
   &._is-active
-    color #000
-    //box-shadow 0 3px 2px #000 inset
+    color #fff
 
   &-demo
     line-height (header-height - 20px)
     background color-link
     color #fff
     border-radius 2px
+
     &:hover
       background #fff
       color color-link
-
-#search-btn-wrap
-  display: none
-  float: right
-  margin-right: 15px
-  @media mq-normal
-    display: block
-
-#search-btn
-  cursor: pointer
-
-#lang-select-wrap
-  display: none
-  position: relative
-  float: right
-  @media mq-normal
-    display: block
-
-#lang-select-label
-  color: #fff
-  opacity: 0.7
-  font-family: font-title
-  line-height: logo-size
-  span
-    padding-left: 8px
-  i
-    opacity: 0.7
-
-#lang-select
-  opacity: 0
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  -webkit-appearance: menulist-button
-  font-size: inherit

@@ -1,33 +1,33 @@
-- title: Scalable layout
-  icon:  arrows-alt
+- title:        Scalable layout
+  illustration: mozaik-icon-extendable.png
   description: |
     **Mozaïk** dashboards support multiple devices through adaptive layout.
     You can either put your dashboard on a big screen in the open space, or consult it on your smartphone.
 
-- title: Themes support
-  icon:  paint-brush
-  link:  themes
+- title:        Themes support
+  illustration: mozaik-icon-themes.png
+  link:         themes
   description: |
     **Mozaïk** dashboard comes with 5 themes and makes it easy to develop your own theme.
 
-- title: Extendable by modules
-  icon:  cubes
-  link:  extensions
+- title:        Extendable by modules
+  illustration: mozaik-icon-extendable.png
+  link:         extensions
   description: |
     **Mozaïk** widgets are maintained as separate modules, thus available via mozaik-ext-&lt;name&gt; in npm.js.
 
-- title: Grid positioning
-  icon:  th
-  link:  docs/grid-system.html
+- title:        Grid positioning
+  illustration: mozaik-icon-positioning.png
+  link:         docs/grid-system.html
   description: |
     **Mozaïk** provides a simple way to define your dashboard layout using a grid system.
 
-- title: Optimized backend communication
-  icon:  exchange
+- title:        Optimized backend communication
+  illustration: mozaik-icon-backend.png
   description: |
     Most extensions need to communicate with APIs. **Mozaïk** eases this by providing a backend, which handles API calls and pushes data to widgets through websockets.
 
-- title: Multi dashboards
-  icon:  clone
+- title:        Multi dashboards
+  illustration: mozaik-icon-extendable.png
   description: |
     Sometimes, a single dashboard is not enough. **Mozaïk** allows multiple dashboards with a smooth transition.

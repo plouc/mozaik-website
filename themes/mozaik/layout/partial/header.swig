@@ -2,7 +2,7 @@
     <div class="strata">
         <div class="strata_in">
             <h1 id="logo-wrap">
-                <a href="{{ config.root }}" id="logo">Mozaïk</a>
+                <a href="{{ config.root }}" class="header_logo">Mozaïk</a>
             </h1>
             {% spaceless %}
             <nav class="main-nav">

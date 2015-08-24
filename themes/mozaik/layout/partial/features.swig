@@ -2,10 +2,9 @@
     {% for feature in site.data.features %}
         <div class="feature">
             <div class="feature_pic">
-                <img src=""/>
+                <img src="{{ url_for(feature.illustration) }}"/>
             </div>
             <h2 class="feature_title">
-                <i class="fa fa-{{ feature.icon }}"></i>
                 {{ feature.title }}
             </h2>
             <div class="feature_desc">

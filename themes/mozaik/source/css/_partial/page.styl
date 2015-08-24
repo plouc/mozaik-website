@@ -12,8 +12,11 @@ note-warn = hsl(0, 100%, 50%)
     margin-left: sidebar-width
 
 .article-container
-  float left
-  width 78%
+  width 100%
+
+  @media mq-normal
+    float left
+    width 78%
 
 .article-inner
   clearfix()

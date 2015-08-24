@@ -1,49 +1,56 @@
-#banner
-  color: rgba(255, 255, 255, 0.8)
-  text-align: center
+.index_banner
+  background-color #13aae3
+  text-align center
+  padding 50px 0 65px 0
+  color #fff
 
-#banner-title
-  padding-top: 20px
-  font-size: 40px
-  line-height: 1.15
-  font-weight: 300
-  font-family: font-title
-  @media mq-normal
-    padding-top: 100px
-    font-size: 50px
+  &_intro
+    margin-bottom 30px
+    font-size 18px
+    font-weight 600
+    text-shadow 0 1px 1px rgba(0, 0, 0, 0.35)
 
-#banner-start
-  text-align: center
-  padding: 40px 0
-  @media mq-normal
-    padding: 60px 0
-    font-size: 18px
+  &_link
+    font-family font-title
+    display inline-block
+    //background #fff
+    color      #fff
+    font-size 15px
+    text-decoration none
+    margin 0
+    border 2px solid #fff
+    padding 12px 16px
+    transition 0.2s
+    text-align center
+    font-weight 700
+    text-transform uppercase
+    //border-radius 3px
+    //box-shadow 0 1px 1px rgba(0, 0, 0, 0.35)
 
-#banner-start-command
-  background: lighten(color-navy, 10%)
-  font-family: font-mono
-  display: inline-block
-  padding: 15px 20px
-  &:before
-    content: "$"
-    opacity: 0.5
-    padding-right: 10px
+    &:hover
+      background #fff
+      color      #13aae3
 
-#banner-start-link
-  color: #fff
-  background: color-link
-  display: inline-block
-  padding: 15px
-  text-decoration: none
-  transition: 0.2s
-  &:hover
-    background: color-link-hover
+    @media mq-mobile
+      width 100%
+      &:first-child
+        margin-bottom 20px
 
+    @media mq-tablet
+      width 47%
+      &:first-child
+        margin-right 4%
+
+    @media mq-normal
+      width 18%
+      &:first-child
+        margin-right 2%
 
 .banner-share
   background #fff
   display none
   text-align center
+  border-bottom 1px solid #ddd
 
   &_wrapper
     max-width max-width
@@ -53,81 +60,3 @@
 
   @media mq-normal
     display block
-
-#intro-feature-list
-  padding-top: 20px
-  display: flex
-  flex-flow: column
-  @media mq-normal
-    flex-flow: row wrap
-
-.intro-feature-wrap
-  padding-top: 20px
-  @media mq-normal
-    flex: 0 0 50%
-    padding-top: 50px
-
-.intro-feature
-  position: relative
-  text-align: center
-  @media mq-normal
-    text-align: left
-    padding-left: 70px
-
-.intro-feature-icon
-  color: color-link
-  font-size: 36px
-  padding-bottom: 26px
-  text-align: center
-  @media mq-normal
-    position: absolute
-    top: 0
-    left: 20px
-    font-size: 24px
-    width: @font-size
-
-.intro-feature-title
-  color: color-link
-  font-family: font-title
-  font-size: 24px
-
-.intro-feature-desc
-  margin: line-height 0
-  line-height: line-height
-
-#intro-cmd-wrap
-  max-width: 700px
-  background: #eee
-  padding: 15px 0
-  margin: 25px gutter-width * -1 0
-  @media mq-normal
-    margin: 50px auto 0
-
-.intro-cmd-item
-  font-size: 16px
-  font-family: font-mono
-  line-height: 2
-  padding: 0 30px
-  &:before
-    content: "$"
-    color: color-link
-    padding-right: 15px
-
-#intro-get-started-wrap
-  text-align: center
-
-#intro-get-started-link
-  font-size: 18px
-  font-family: font-title
-  display: inline-block
-  color: color-link
-  text-decoration: none
-  margin: 40px 0
-  border: 3px solid
-  border-color: lighten(color-link, 20%)
-  padding: 12px 24px
-  position: relative
-  transition: 0.2s
-  &:hover
-    background: @border-color
-    color: #fff
