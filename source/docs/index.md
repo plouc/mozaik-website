@@ -56,6 +56,6 @@ You should start from the default config file and customize it to fit your needs
 
 ## Docker
 
-**Mozaïk** provides a docker image
+*coming soon*
 
 [yo-generator-url]: https://www.npmjs.com/package/generator-mozaik
