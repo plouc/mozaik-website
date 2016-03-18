@@ -12,6 +12,7 @@
   tags:
     - travis
     - ci
+    - testing
 
 - name:        mozaik-ext-time
   description: Time widgets for Mozaïk.
@@ -34,6 +35,7 @@
   tags:
     - jenkins
     - ci
+    - testing
 
 - name:        mozaik-ext-heroku
   description: Heroku widgets for Mozaïk.
@@ -62,3 +64,11 @@
   link:        https://github.com/swissmanu/mozaik-ext-bamboo
   tags:
     - bamboo
+
+- name:        mozaik-ext-saucelabs
+  description: SauceLabs widgets for Mozaïk.
+  link:        https://github.com/iamfiscus/mozaik-ext-saucelabs
+  tags:
+    - saucelabs
+    - ci
+    - testing
