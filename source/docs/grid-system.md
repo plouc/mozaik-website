@@ -2,7 +2,7 @@ title: Configuration
 baseline: Configure Mozaïk grid system
 comments: false
 ---
-As we saw previously in the [config.js](/mozaik/docs/config-file.html) section, **Mozaïk** provides a simple way to define dashboard layout. Let's see how it works.
+As we saw previously in the [config.js](/docs/config-file.html) section, **Mozaïk** provides a simple way to define dashboard layout. Let's see how it works.
 
 
 To configure a layout like this:
