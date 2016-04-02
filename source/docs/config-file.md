@@ -29,6 +29,8 @@ module.exports = {
 
         // a second dashboard
         {
+            // add title
+            title: 'My second Mozaïk dashboard',
             // defines dashboard grid: 5 x 4
             columns: 5, rows: 4,
         }
