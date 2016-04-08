@@ -15,4 +15,4 @@ Widgets share some common properties which are all required:
 | **columns** | *width expressed in columns*        |
 | **rows**    | *height expressed in rows*          |
 
-*for properties related to position/size see [grid system](/docs/grid-system.html).*
+*for properties related to position/size see [grid system](/usage/grid-system.html).*

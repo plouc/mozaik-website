@@ -2,7 +2,9 @@
     <div class="strata">
         <div class="strata_in">
             <div id="footer-copyright">
-              &copy; {{ moment(Date.now()).year() }} <a href="{{ config.author_link }}" target="_blank">{{ config.author }}</a>
+                <a href="https://github.com/plouc/mozaik">Mozaïk</a> |  Distributed under MIT License |
+                crafted by <a href="{{ config.author_link }}" target="_blank">{{ config.author }}</a> aka <a href="https://github.com/plouc">plouc</a> |
+                Found an issue with the docs? Report it <a href="https://github.com/plouc/mozaik-website/issues/new">here</a>
             </div>
         </div>
     </div>

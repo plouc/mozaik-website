@@ -14,9 +14,6 @@
                     {% endfor %}
                     <li class="main-nav_item">
                         <a href="https://github.com/{{ config.github }}" target="_blank" class="main-nav_link">
-                            <!--
-                            <i class="fa fa-github-alt"></i>
-                            -->
                             Github
                         </a>
                     </li>

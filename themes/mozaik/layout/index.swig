@@ -7,7 +7,7 @@
                 </p>
                 <div id="intro-get-started-wrap">
                     <a class="index_banner_link" href="http://mozaik.herokuapp.com/" target="_blank">demo</a>
-                    <a class="index_banner_link" href="{{ url_for('docs') }}">get started</a>
+                    <a class="index_banner_link" href="{{ url_for('usage') }}">get started</a>
                 </div>
             {% endspaceless %}
             <!--
@@ -17,11 +17,6 @@
     </div>
 </div>
 {{ partial('partial/share') }}
-<div class="strata_out page_content">
-    <div class="strata">
-        <div class="strata_in">
-            <h2 class="features_title">Features</h2>
-            {{ partial('partial/features') }}
-        </div>
-    </div>
-</div>
+{{ partial('partial/features') }}
+{{ partial('partial/references') }}
+{{ partial('partial/use_cases') }}

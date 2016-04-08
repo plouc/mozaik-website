@@ -18,12 +18,13 @@
 
 - title:        Grid positioning
   illustration: mozaik-icon-positioning.png
-  link:         docs/grid-system.html
+  link:         usage/grid-system.html
   description: |
     **Mozaïk** provides a simple way to define your dashboard layout using a grid system.
 
 - title:        Optimized backend communication
   illustration: mozaik-icon-backend.png
+  link:         develop/client.html
   description: |
     Most extensions need to communicate with APIs. **Mozaïk** eases this by providing a backend, which handles API calls and pushes data to widgets through websockets.
 

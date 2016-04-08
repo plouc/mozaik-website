@@ -13,7 +13,7 @@
                 <strong>Mozaïk</strong> widgets are maintained as separate modules,
                 available as mozaik-ext-&lt;name&gt; npm packages.<br/>
                 Below is a list of some already existing extensions.
-                See <a href="{{ url_for('docs/widgets.html') }}">widget configuration</a>.
+                See <a href="{{ url_for('usage/widgets.html') }}">widget configuration</a>.
             </div>
             <div class="extensions">
                 {% for extension in _.sortBy(site.data[page.data], 'name') %}

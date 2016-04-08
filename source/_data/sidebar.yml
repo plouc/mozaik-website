@@ -1,4 +1,4 @@
-docs:
+usage:
   'Getting started':
     Setup: index.html
   Configuration:
@@ -6,3 +6,11 @@ docs:
     'Grid system': grid-system.html
     Theme:         theme.html
     Widgets:       widgets.html
+
+develop:
+  Basics:
+    'Anatomy of an extension': extension-anatomy.html
+  'Extension clients':
+    'About extension clients': client.html
+    'Poll mode':               client-poll-mode.html
+    'Push mode':               client-push-mode.html
