@@ -15,3 +15,5 @@ It's useful when you communicate with an external service through websockets or 
 The main difference with `poll` mode is that Mozaïk is no more responsible for fetching the data at a given interval, your client acts as a producer and notify Mozaïk when it wants to push some fresh data to its bound widgets.
 
 ## How to use it
+
+There's a gist available [here](https://gist.github.com/plouc/5fc5d80aa74e4a6c3196a265602c509c).

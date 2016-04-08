@@ -1,3 +1,7 @@
 - image: jolicode.svg
   link:  http://jolicode.com/
   label: JoliCode
+
+- image: icelandair.svg
+  link:  https://labs.icelandair.com
+  label: Icelandair Digital Labs

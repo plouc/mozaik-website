@@ -1,13 +1,9 @@
 .themes
-  margin 40px 0 40px 0
-  display flex
-  flex-flow row wrap
-  flex-direction row
-  flex-wrap wrap
-  justify-content space-between
+  margin 50px 0 30px 0
+  visibility hidden
 
-  @media mq-mobile
-    justify-content space-around
+  &.slick-initialized
+    visibility visible
 
   &_intro
     margin 30px 0 0 0
@@ -17,30 +13,12 @@
     border-left 3px solid #71cff2
 
 .theme
-  margin-bottom 20px
-  border-radius 2px
-
-  flex-grow   0
-  flex-shrink 0
+  padding 0 20px
 
   &_name
     display block
-    font-family font-title
-    font-size 18px
-    font-weight 700
-    margin-bottom 10px
+    margin-bottom 12px
+    padding-left 3px
 
   img
-    border-radius 2px
-    box-shadow 0 2px 3px rgba(0, 0, 0, 0.35)
     max-width 100%
-    float left
-
-  @media mq-mobile
-    flex-basis  100%
-
-  @media mq-tablet
-    flex-basis  48%
-
-  @media mq-normal
-    flex-basis  32%
