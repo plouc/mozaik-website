@@ -15,7 +15,7 @@ module.exports = {
     host: 'localhost', // Mozaïk host
     port: 5000,        // Mozaïk port
 
-    theme: 'nigh-blue', // Mozaïk theme to use
+    theme: 'night-blue', // Mozaïk theme to use
 
     rotationDuration: 8000, // Mozaïk dashboard rotation interval (ms)
 
