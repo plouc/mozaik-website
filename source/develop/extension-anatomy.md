@@ -17,6 +17,7 @@ mozaik-ext-awesome/ # root extension directory
     client.js    # extension's client
     config.js    # define your extension's client configuration schema using convict
   styl/        # custom extension styles if you need some
+    index.styl   # this is the file that gets collected by Mozaïk
   test/        # of course :)
   .eslintrc    # javascript linter configuration 
   .babelrc     # required for es6/jsx transiplation
@@ -24,6 +25,6 @@ mozaik-ext-awesome/ # root extension directory
   .travis.yml  # to automatically run your tests
   client.js    # entry point to your extension's client
   package.json # dependencies, meta, scripts…
-  REAMDE.md    # extension description and documentation
+  README.md    # extension description and documentation
 ```
 
