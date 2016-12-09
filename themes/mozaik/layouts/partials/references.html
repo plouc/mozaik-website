@@ -1,0 +1,14 @@
+<div class="strata_out references">
+    <div class="strata">
+        <div class="strata_in">
+            <h2 class="references_title">Who's using it</h2>
+            <div class="references_wrapper">
+                {{ range .Site.Params.references }}
+                <a class="references_item" href="{{ .link }}" title="{{ .label }}">
+                    <img src="{{ printf "/images/%s" .image }}" alt="{{ .label }}"/>
+                </a>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</div>

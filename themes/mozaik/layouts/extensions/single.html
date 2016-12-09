@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="strata_out sub-header">
+                <div class="strata">
+                    <div class="strata_in">
+                        <h1 class="page-title">{{ .Title }}</h1>
+                        {{ if .Params.baseline }}
+                            <div class="page-baseline">{{ .Params.baseline }}</div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="strata_out page_content">
+    <div class="strata">
+        <div class="strata_in">
+            <div class="extensions_intro">
+                {{ .Content }}
+            </div>
+            <div class="extensions">
+                {{ range .Site.Params.extensions }}
+                    {{ partial "extension" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

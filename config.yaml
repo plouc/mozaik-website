@@ -1,0 +1,161 @@
+---
+baseurl: "http://yoursite.example.com/"
+title: Mozaïk
+footnotereturnlinkcontents: "↩"
+theme: mozaik
+
+permalinks:
+  post: /:year/:month/:title/
+
+menu:
+  mainV1:
+    - name:   Usage
+      URL:    /v1/usage/
+      weight: 10
+    - name:   Extensions
+      URL:    /extensions/
+      weight: 20
+    - name:   Themes
+      URL:    /v1/themes/
+      weight: 30
+    - name:   Develop
+      URL:    /v1/develop/
+      weight: 40
+    - name:   News
+      URL:    /blog/
+      weight: 50
+
+params:
+  Subtitle: "Spinning the cogs in the widgets"
+  AuthorName: "John Doe"
+  GitHubUser: "plouc"
+  SidebarRecentLimit: 5
+  dateform: Jan 2, 2006
+  dateformfull: Mon Jan 2 2006 15:04:05 MST
+
+  references:
+    - image: jolicode.svg
+      link:  http://jolicode.com/
+      label: JoliCode
+
+    - image: canalplus.png
+      link:  http://canalplus.github.io/
+      label: Canal+
+
+    - image: aptus-health.png
+      link:  http://www.aptushealth.com/
+      label: Aptus Health
+
+  features:
+    - title:        Scalable layout
+      illustration: mozaik-icon-extendable.png
+      description: |
+        **Mozaïk** dashboards support multiple devices through adaptive layout.
+        You can either put your dashboard on a big screen in the open space, or consult it on your smartphone.
+
+    - title:        Themes support
+      illustration: mozaik-icon-themes.png
+      link:         themes
+      description: |
+        **Mozaïk** dashboard comes with 6 themes and makes it easy to develop your own theme.
+
+    - title:        Extendable by modules
+      illustration: mozaik-icon-extendable.png
+      link:         extensions
+      description: |
+        **Mozaïk** widgets are maintained as separate modules, thus available via mozaik-ext-&lt;name&gt; in npm.js.
+
+    - title:        Grid positioning
+      illustration: mozaik-icon-positioning.png
+      link:         usage/grid-system.html
+      description: |
+        **Mozaïk** provides a simple way to define your dashboard layout using a grid system.
+
+    - title:        Optimized backend communication
+      illustration: mozaik-icon-backend.png
+      link:         develop/client.html
+      description: |
+        Most extensions need to communicate with APIs. **Mozaïk** eases this by providing a backend, which handles API calls and pushes data to widgets through websockets.
+
+    - title:        Multi dashboards
+      illustration: mozaik-icon-extendable.png
+      description: |
+        Sometimes, a single dashboard is not enough. **Mozaïk** allows multiple dashboards with a smooth transition.
+
+  extensions:
+    - name:        mozaik-ext-github
+      description: Github widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-github
+      travis:      plouc/mozaik-ext-github
+      tags:
+        - github
+
+    - name:        mozaik-ext-travis
+      description: Travis widgets for Mozaïk
+      link:        https://github.com/plouc/mozaik-ext-travis
+      travis:      plouc/mozaik-ext-travis
+      tags:
+        - travis
+        - ci
+        - testing
+
+    - name:        mozaik-ext-time
+      description: Time widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-time
+      travis:      plouc/mozaik-ext-time
+      tags:
+        - time
+
+    - name:        mozaik-ext-weather
+      description: Weather widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-weather
+      travis:      plouc/mozaik-ext-weather
+      tags:
+        - weather
+
+    - name:        mozaik-ext-jenkins
+      description: Jenkins widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-jenkins
+      travis:      plouc/mozaik-ext-jenkins
+      tags:
+        - jenkins
+        - ci
+        - testing
+
+    - name:        mozaik-ext-heroku
+      description: Heroku widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-heroku
+      travis:      plouc/mozaik-ext-heroku
+      tags:
+        - heroku
+        - deploy
+
+    - name:        mozaik-ext-analytics
+      description: Google analytics widgets for Mozaïk.
+      link:        https://github.com/SC5/mozaik-ext-analytics
+      tags:
+        - google
+        - analytics
+
+    - name:        mozaik-ext-calendar
+      description: Google calendar widgets for Mozaïk.
+      link:        https://github.com/SC5/mozaik-ext-analytics
+      tags:
+        - google
+        - calendar
+
+    - name:        mozaik-ext-bamboo
+      description: Bamboo widgets for Mozaïk.
+      link:        https://github.com/swissmanu/mozaik-ext-bamboo
+      tags:
+        - bamboo
+
+    - name:        mozaik-ext-saucelabs
+      description: SauceLabs widgets for Mozaïk.
+      link:        https://github.com/iamfiscus/mozaik-ext-saucelabs
+      tags:
+        - saucelabs
+        - ci
+        - testing
+
+...

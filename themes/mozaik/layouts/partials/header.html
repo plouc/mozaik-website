@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head" . }}
+<body lang="{{ .Site.Params.lang }}">
+<header class="strata_out header">
+    <div class="strata">
+        <div class="strata_in">
+            <h1 id="logo-wrap">
+                <a href="{{ .Site.BaseURL }}" class="header_logo">Mozaïk</a>
+            </h1>
+            <nav class="main-nav">
+                {{ range .Site.Menus.mainV1 }}
+                    <a href="{{ .URL }}" class="main-nav_item">{{ .Name }}</a>
+                {{end}}
+                <a href="https://github.com/" target="_blank" class="main-nav_item">Github</a>
+                <a href="http://mozaik.herokuapp.com/" target="_blank" class="main-nav_item main-nav_item-demo">demo</a>
+            </nav>
+            <a id="mobile-nav-toggle">
+                <span class="mobile-nav-toggle-bar"></span>
+                <span class="mobile-nav-toggle-bar"></span>
+                <span class="mobile-nav-toggle-bar"></span>
+            </a>
+            <a id="mobile-search-btn" class="st-search-launcher"></a>
+        </div>
+    </div>
+</header>
+<div id="container">

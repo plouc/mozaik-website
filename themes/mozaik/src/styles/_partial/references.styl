@@ -1,0 +1,56 @@
+.references
+  background #fff
+  border-top    1px solid #ddd
+  border-bottom 1px solid #ddd
+  padding-bottom 25px
+
+  &_title
+    font-family font-title
+    font-weight 700
+    font-size 22px
+    margin 30px 0 30px 0
+    text-transform uppercase
+
+    @media mq-mobile
+      text-align center
+
+  &_wrapper
+    display flex
+    justify-content space-between
+    align-items stretch
+
+    @media mq-mobile
+      flex-wrap wrap
+
+    @media mq-tablet
+      flex-wrap wrap
+
+    @media mq-normal
+      flex-wrap nowrap
+
+  &_item
+    display flex
+    justify-content center
+    align-items center
+    margin-bottom 15px
+    padding 0 15px
+    height 60px
+
+    @media mq-mobile
+      width  48%
+
+    @media mq-tablet
+      width  31%
+
+    @media mq-normal
+      width  24%
+
+    img
+      max-width  100%
+      max-height 100%
+
+
+
+
+
+

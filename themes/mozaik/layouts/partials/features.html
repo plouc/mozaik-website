@@ -1,0 +1,23 @@
+<div class="strata_out page_content">
+    <div class="strata">
+        <div class="strata_in">
+            <h2 class="features_title">Features</h2>
+            <div class="features">
+                {{ range .Site.Params.features }}
+                    <div class="feature">
+                        <div class="feature_pic">
+                            <img src="{{ printf "/images/%s" .illustration }}"/>
+                        </div>
+                        <h2 class="feature_title">{{ .title }}</h2>
+                        <div class="feature_desc">
+                            {{ .description | markdownify }}
+                            {{ if .link }}
+                                <a class="feature_more" href="{{ .link }}">more</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

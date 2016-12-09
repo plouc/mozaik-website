@@ -1,27 +1,55 @@
-'use strict';
-var gulp    = require('gulp');
-var $       = require('gulp-load-plugins')();
-var cssnano = require('cssnano');
+'use strict'
+
+const gulp       = require('gulp')
+const watch      = require('gulp-watch')
+const stylus     = require('gulp-stylus')
+const nib        = require('nib')
+const concat     = require('gulp-concat')
+const uglify     = require('gulp-uglify')
+const rename     = require('gulp-rename')
+const stripDebug = require('gulp-strip-debug')
+const sourcemaps = require('gulp-sourcemaps')
+const path       = require('path')
 
 
-gulp.task('default', function () {
-    var assets = $.useref.assets({
-        searchPath: 'public'
-    });
+const themePath = './themes/mozaik'
+const srcPath   = path.join(themePath, 'src')
+const destPath  = path.join(themePath, 'static')
 
-    return gulp.src('public/**/*.html')
-        .pipe(assets)
-        .pipe($.uniqueFiles())
-        .pipe($.if('*.css', $.postcss([
-            cssnano()
-        ])))
-        .pipe($.if('*.js', $.uglify()))
-        .pipe($.rev())
-        .pipe(assets.restore())
-        .pipe($.useref())
-        .pipe($.revReplace({
-            prefix: '/'
+const paths = {
+    js:     path.join(srcPath, 'js'),
+    styles: path.join(srcPath, 'styles'),
+}
+
+gulp.task('js', () => {
+    gulp.src(path.join(paths.js, '**/*.js'))
+        .pipe(sourcemaps.init())
+        .pipe(concat('mozaik.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.join(destPath, 'js')))
+})
+
+
+gulp.task('styles', () => {
+    gulp.src(path.join(paths.styles, 'mozaik.styl'))
+        .pipe(stylus({
+            use:           nib(),
+            compress:      true,
+            'include css': true,
         }))
-        .pipe(gulp.dest('public'))
-    ;
-});
+        .pipe(gulp.dest(path.join(destPath, 'css')))
+})
+
+gulp.task('watch', [
+    'js',
+    'styles',
+], () => {
+    gulp.watch(path.join(paths.js, '**/*.js'), ['js'])
+    gulp.watch(path.join(paths.styles, '**/*.styl'), ['styles'])
+})
+
+gulp.task('default', [
+    'js',
+    'styles',
+])
