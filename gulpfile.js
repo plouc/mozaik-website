@@ -7,14 +7,12 @@ const nib        = require('nib')
 const concat     = require('gulp-concat')
 const uglify     = require('gulp-uglify')
 const rename     = require('gulp-rename')
-const stripDebug = require('gulp-strip-debug')
 const sourcemaps = require('gulp-sourcemaps')
 const path       = require('path')
 
 
-const themePath = './themes/mozaik'
-const srcPath   = path.join(themePath, 'src')
-const destPath  = path.join(themePath, 'static')
+const srcPath   = 'src'
+const destPath  = 'static'
 
 const paths = {
     js:     path.join(srcPath, 'js'),

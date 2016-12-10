@@ -1,0 +1,12 @@
+<div class="strata_out use-cases">
+    <div class="strata">
+        <div class="strata_in">
+            <h2 class="use-cases_title">Use cases</h2>
+            {{ range .Site.Params.useCases }}
+                <a class="use-cases_item" href="{{ .link }}">
+                    {{ .title }}
+                </a>
+            {{ end }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.sidebar
+  width 240px
+  float right
+  padding 30px 0
+  display none
+  background #f5f5f5
+
+  @media mq-normal
+    display block
+
+  &__title
+    margin-top 20px
+    padding 10px 0
+    font-family font-title
+    font-weight 700
+    color color-link
+    display block
+    border-bottom 1px solid color-border
+    line-height 1
+    margin-bottom 7px
+
+  &__link
+    font-family font-title
+    display block
+    color color-default
+    text-decoration none
+    padding 7px 0
+    line-height 1
+    position relative
+    width 100%
+    text-overflow ellipsis
+    overflow hidden
+    white-space nowrap
+    &._is-current
+      color color-link
+    &:hover
+      color color-link-hover

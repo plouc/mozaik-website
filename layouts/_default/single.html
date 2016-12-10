@@ -1,0 +1,29 @@
+{{ partial "header" . }}
+{{ partial "sub_header" . }}
+<div class="strata_out page_content">
+    <div class="strata">
+        <div class="strata_in">
+            <article class="article-container" itemscope itemtype="http://schema.org/Article">
+                <div class="article">
+                    <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </article>
+            {{ if isset .Params "menu" }}
+                {{ $currentNode := . }}
+                {{ $menu := .Params.menu }}
+                <aside class="sidebar" role="navigation">
+                    <nav>
+                        {{ range (index .Site.Menus $menu) }}
+                            <a href="{{ .URL }}" class="sidebar__link{{ if $currentNode.IsMenuCurrent $menu . }} _is-current{{ end }}">
+                                {{ .Name }}
+                            </a>
+                        {{ end }}
+                    </nav>
+                </aside>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}

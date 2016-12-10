@@ -1,37 +1,38 @@
 ---
 baseurl: "http://yoursite.example.com/"
 title: Mozaïk
-footnotereturnlinkcontents: "↩"
-theme: mozaik
+
+canonifyurls: true
 
 permalinks:
   post: /:year/:month/:title/
 
 menu:
   mainV1:
-    - name:   Usage
-      URL:    /v1/usage/
+    - name:   Use
+      URL:    /v1/use/
       weight: 10
-    - name:   Extensions
+
+    - name:   Extend
       URL:    /extensions/
       weight: 20
-    - name:   Themes
-      URL:    /v1/themes/
+
+    - name:   Theme
+      URL:    /themes/
       weight: 30
-    - name:   Develop
-      URL:    /v1/develop/
+
+    - name:   Hack
+      URL:    /v1/hack/
       weight: 40
+
     - name:   News
-      URL:    /blog/
+      URL:    /news/
       weight: 50
 
 params:
   Subtitle: "Spinning the cogs in the widgets"
-  AuthorName: "John Doe"
+  AuthorName: "Raphaël Benitte"
   GitHubUser: "plouc"
-  SidebarRecentLimit: 5
-  dateform: Jan 2, 2006
-  dateformfull: Mon Jan 2 2006 15:04:05 MST
 
   references:
     - image: jolicode.svg
@@ -46,6 +47,29 @@ params:
       link:  http://www.aptushealth.com/
       label: Aptus Health
 
+  useCases:
+    - title: Mozaïk meets Apache Spark, Rock-Paper-Scissors!
+      link:  https://developer.ibm.com/clouddataservices/2015/12/01/humans-vs-apache-spark-building-our-rock-paper-scissors-game/
+
+    - title: JoliDashboard at Jolicode, serious geeks having fun with Mozaïk
+      link:  http://jolicode.com/blog/joliday-2015-avec-de-la-sciure-de-l-etain-et-des-lego
+
+  themes:
+    - name:       night-blue
+      screenshot: night-blue.png
+
+    - name:       bordeau
+      screenshot: bordeau.png
+
+    - name:       light-grey
+      screenshot: light-grey.png
+
+    - name:       yellow
+      screenshot: yellow.png
+
+    - name:       light-yellow
+      screenshot: light-yellow.png
+
   features:
     - title:        Scalable layout
       illustration: mozaik-icon-extendable.png
@@ -55,25 +79,25 @@ params:
 
     - title:        Themes support
       illustration: mozaik-icon-themes.png
-      link:         themes
+      link:         /themes/
       description: |
         **Mozaïk** dashboard comes with 6 themes and makes it easy to develop your own theme.
 
     - title:        Extendable by modules
       illustration: mozaik-icon-extendable.png
-      link:         extensions
+      link:         /extensions/
       description: |
         **Mozaïk** widgets are maintained as separate modules, thus available via mozaik-ext-&lt;name&gt; in npm.js.
 
     - title:        Grid positioning
       illustration: mozaik-icon-positioning.png
-      link:         usage/grid-system.html
+      link:         /v1/use/grid/
       description: |
         **Mozaïk** provides a simple way to define your dashboard layout using a grid system.
 
     - title:        Optimized backend communication
       illustration: mozaik-icon-backend.png
-      link:         develop/client.html
+      link:         /v1/hack/client/
       description: |
         Most extensions need to communicate with APIs. **Mozaïk** eases this by providing a backend, which handles API calls and pushes data to widgets through websockets.
 
@@ -86,13 +110,29 @@ params:
     - name:        mozaik-ext-github
       description: Github widgets for Mozaïk.
       link:        https://github.com/plouc/mozaik-ext-github
+      demo:        https://mozaik-github.herokuapp.com/
       travis:      plouc/mozaik-ext-github
       tags:
         - github
 
+    - name:        mozaik-ext-gitlab
+      description: GitLab widgets for Mozaïk.
+      link:        https://github.com/plouc/mozaik-ext-gitlab
+      demo:        https://mozaik-gitlab.herokuapp.com/
+      travis:      plouc/mozaik-ext-gitlab
+      tags:
+        - gitlab
+
+    - name:        mozaik-ext-slack
+      description: Slack widgets for Mozaïk.
+      link:        https://github.com/juhamust/mozaik-ext-slack
+      tags:
+        - slack
+
     - name:        mozaik-ext-travis
-      description: Travis widgets for Mozaïk
+      description: Travis widgets for Mozaïk.
       link:        https://github.com/plouc/mozaik-ext-travis
+      demo:        https://mozaik-travis.herokuapp.com/
       travis:      plouc/mozaik-ext-travis
       tags:
         - travis
@@ -102,6 +142,7 @@ params:
     - name:        mozaik-ext-time
       description: Time widgets for Mozaïk.
       link:        https://github.com/plouc/mozaik-ext-time
+      demo:        https://mozaik-time.herokuapp.com/
       travis:      plouc/mozaik-ext-time
       tags:
         - time
@@ -122,6 +163,13 @@ params:
         - ci
         - testing
 
+    - name:        mozaik-ext-teamcity
+      description: Teamcity widgets for Mozaïk.
+      link:        https://github.com/gazab/mozaik-ext-teamcity
+      tags:
+        - teamcity
+        - ci
+
     - name:        mozaik-ext-heroku
       description: Heroku widgets for Mozaïk.
       link:        https://github.com/plouc/mozaik-ext-heroku
@@ -137,6 +185,25 @@ params:
         - google
         - analytics
 
+    - name:        mozaik-ext-switch
+      description: Multiple widgets with periodic switching.
+      link:        https://github.com/juhamust/mozaik-ext-switch
+      tags:
+        - switch
+
+    - name:        mozaik-ext-embed
+      description: Mozaïk extension to embed raw content like HTML markup into widget.
+      link:        https://github.com/juhamust/mozaik-ext-embed
+      tags:
+        - iframe
+        - html
+
+    - name:        mozaik-ext-iframe
+      description: iFrame widgets for Mozaïk.
+      link:        https://github.com/tomav/mozaik-ext-iframe
+      tags:
+        - iframe
+
     - name:        mozaik-ext-calendar
       description: Google calendar widgets for Mozaïk.
       link:        https://github.com/SC5/mozaik-ext-analytics
@@ -144,11 +211,45 @@ params:
         - google
         - calendar
 
+    - name:        mozaik-ext-json
+      description: Mozaïk extension that displays a distant JSON object in a widget.
+      link:        https://github.com/jtbonhomme/mozaik-ext-json
+      tags:
+        - json
+
+    - name:        mozaik-ext-multijson
+      description: Widget to display information from multiple json sources.
+      link:        https://github.com/jtbonhomme/mozaik-ext-multijson
+      tags:
+        - json
+
+    - name:        mozaik-ext-value
+      description: Mozaïk value plugin.
+      link:        https://github.com/arildwtv/mozaik-ext-value
+      tags:
+        - basic
+        - value
+
     - name:        mozaik-ext-bamboo
       description: Bamboo widgets for Mozaïk.
       link:        https://github.com/swissmanu/mozaik-ext-bamboo
       tags:
         - bamboo
+
+    - name:        mozaik-ext-image
+      description: Show image in a Mozaïk widget.
+      link:        https://www.npmjs.com/package/mozaik-ext-image
+      tags:
+        - basic
+        - image
+
+    - name:        mozaik-ext-okrs
+      description: Show OKR week trends from Google Sheets.
+      link:        https://github.com/grahamar/mozaik-ext-okrs
+      tags:
+        - google
+        - spreadsheet
+        - OKR
 
     - name:        mozaik-ext-saucelabs
       description: SauceLabs widgets for Mozaïk.

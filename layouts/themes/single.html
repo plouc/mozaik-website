@@ -1,0 +1,20 @@
+{{ partial "header" . }}
+{{ partial "sub_header" . }}
+<div class="strata_out page_content">
+    <div class="strata">
+        <div class="strata_in">
+            <div class="themes_intro">
+                {{ .Content }}
+            </div>
+            <div class="themes">
+                {{ range .Site.Params.themes }}
+                    <div class="theme">
+                        <h2 class="theme_name">{{ .name }}</h2>
+                        <img src="{{ printf "/images/themes/%s" .screenshot }}"/>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}

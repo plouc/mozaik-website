@@ -1,0 +1,9 @@
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+      <h1 class="article-title" itemprop="name">{{ .Title }}</h1>
+      <a href="{{ .Permalink }}" class="article-date">Publlished on {{ .Date.Format "January 2 2006" }}</a>
+  </header>
+  <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+    {{ .Content }}
+  </div>
+</article>

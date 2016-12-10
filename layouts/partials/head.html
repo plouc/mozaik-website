@@ -1,0 +1,21 @@
+<head>
+    {{ partial "meta" . }}
+    <base href="{{ .Site.BaseURL }}">
+    <title>
+        {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+        {{ if eq $url "/" }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} | {{ .Site.Title }}
+        {{ end }}
+    </title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <!-- Icon -->
+    <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/icon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/images/icon/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/images/icon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/icon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" sizes="32x32">
+    {{ partial "head_includes" . }}
+</head>
