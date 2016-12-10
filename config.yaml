@@ -1,11 +1,16 @@
 ---
-baseurl: "http://yoursite.example.com/"
+baseurl: "http://mozaik.rocks/"
 title: Mozaïk
 
 canonifyurls: true
 
 permalinks:
   post: /:year/:month/:title/
+
+sitemap:
+  changefreq: monthly
+  priority:   0.5
+  filename:   sitemap.xml
 
 menu:
   mainV1:
