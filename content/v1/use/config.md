@@ -2,7 +2,10 @@
 title: Configuration
 description: Configure Mozaïk
 weight: 20
-menu: use-v1
+menu:
+  main:
+    identifier: use-v1-config
+    parent:     use-v1
 ---
 **config.js** is the main **Mozaïk** config, it's where you configure your dashboards.
 It must be located at the root of your main **Mozaïk** project directory.

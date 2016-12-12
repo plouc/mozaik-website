@@ -2,7 +2,10 @@
 title: Getting started
 description: Have Mozaïk up and running in minutes
 weight: 10
-menu: use-v1
+menu:
+  main:
+    identifier: use-v1-index
+    parent:     use-v1
 ---
 ## Sample Repo
 

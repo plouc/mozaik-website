@@ -2,7 +2,10 @@
 title: Extension client [push mode]
 description: How to feed your hungry widgets in near real time
 weight: 50
-menu: hack-v1
+menu:
+  main:
+    identifier: hack-v1-client-push
+    parent:     hack-v1
 ---
 If you didn't read the [intro]({{< relref "v1/hack/client.md" >}}) on Mozaïk extension client,
 then you should consider [reading it first]({{< relref "v1/hack/client.md" >}}).

@@ -2,7 +2,10 @@
 title: Getting started
 description: Have Mozaïk V2 up and running in minutes
 weight: 10
-menu: use-v2
+menu:
+  main:
+    identifier: use-v2-index
+    parent:     use-v2
 ---
 
 This is the install guide for Mozaïk v2, be aware that this version

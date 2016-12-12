@@ -1,34 +1,24 @@
 <aside class="sidebar">
     {{ if isset .Params "menu" }}
         {{ $currentNode := . }}
-        {{ $menu := .Params.menu }}
         <nav role="navigation">
-            {{ range (index .Site.Menus $menu) }}
-                <a href="{{ .URL }}" class="sidebar__link{{ if $currentNode.IsMenuCurrent $menu . }} _is-current{{ end }}">
-                    {{ .Name }}
-                </a>
+            {{ range .Site.Menus.main }}
+                {{ if $currentNode.HasMenuCurrent "main" . }}
+                    {{ $parent := . }}
+                    {{ range .Children }}
+                        {{ if $currentNode.HasMenuCurrent "main" . }}
+                            <span class="sidebar__title">
+                                {{ $parent.Name }} / {{ .Name }}
+                            </span>
+                            {{ range .Children }}
+                                <a href="{{ .URL }}" class="sidebar__link{{ if $currentNode.IsMenuCurrent "main" . }} _is-current{{ end }}">
+                                    {{ .Name }}
+                                </a>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             {{ end }}
         </nav>
     {{ end }}
-    {{/*
-    {{ if isset .Params "mozaik_version" }}
-        {{ $current := .Params.mozaik_version }}
-        {{ if gt (len .Site.Params.mozaikVersions) 1 }}
-            <div class="versions">
-                <div class="versions__intro">
-                    You're currently browsing documentation
-                    for Mozaïk v{{ $current }}
-                </div>
-                <div class="versions__switch">
-                    switch to
-                    {{ range .Site.Params.mozaikVersions }}
-                        {{ if ne . $current }}
-                            <a href="">v{{ . }}</a>
-                        {{ end }}
-                    {{ end }}
-                </div>
-            </div>
-        {{ end }}
-    {{ end }}
-    */}}
 </aside>

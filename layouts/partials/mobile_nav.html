@@ -1,0 +1,57 @@
+<nav id="mobile-nav">
+    <div id="mobile-nav-inner">
+        <ul id="mobile-nav-list">
+            {{ $currentNode := . }}
+            {{ range .Site.Menus.main }}
+                <li class="mobile-nav-item">
+                    {{ if .HasChildren }}
+                        <span class="mobile-nav__link{{ if $currentNode.HasMenuCurrent "main" . }} _is-active{{ end }}">
+                            {{ .Name }}
+                        </span>
+                        {{ $parentName := .Name }}
+                        {{ range .Children }}
+                            <ul>
+                                <li class="mobile-nav-item">
+                                    {{ if .HasChildren }}
+                                        <a href="{{ .URL }}" class="mobile-nav__link{{ if $currentNode.HasMenuCurrent "main" . }} _is-active{{ end }}">
+                                            {{ $parentName }} / {{ .Name }}
+                                        </a>
+                                        {{ if $currentNode.HasMenuCurrent "main" . }}
+                                            <ul>
+                                                {{ range .Children }}
+                                                    <li class="mobile-nav-item">
+                                                        <a href="{{ .URL }}" class="mobile-nav__link mobile-nav__link--sub{{ if $currentNode.IsMenuCurrent "main" . }} _is-active{{ end }}">
+                                                            {{ .Name }}
+                                                        </a>
+                                                    </li>
+                                                {{ end }}
+                                            </ul>
+                                        {{ end }}
+                                    {{ else }}
+                                        <a href="{{ .URL }}" class="mobile-nav__link">
+                                            {{ .Name }}
+                                        </a>
+                                    {{ end }}
+                                </li>
+                            </ul>
+                        {{ end }}
+                    {{ else }}
+                        <a href="{{ .URL }}" class="mobile-nav__link{{ if $currentNode.IsMenuCurrent "main" . }} _is-active{{ end }}">
+                            {{ .Name }}
+                        </a>
+                    {{ end }}
+                </li>
+            {{ end }}
+            <li class="mobile-nav-item">
+                <a href="https://github.com/plouc/mozaik" class="mobile-nav__link" rel="external" target="_blank">
+                    GitHub
+                </a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="http://mozaik.herokuapp.com/" rel="external" target="_blank" class="mobile-nav__link">
+                    Demo
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

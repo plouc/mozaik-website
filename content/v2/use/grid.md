@@ -2,7 +2,10 @@
 title: Grid system
 description: Configure Mozaïk V2 grid system
 weight: 30
-menu: use-v2
+menu:
+  main:
+    identifier: use-v2-grid
+    parent:     use-v2
 ---
 As we saw previously in the [config.yml]({{< relref "v2/use/config.md" >}}) section,
 **Mozaïk** provides a simple way to define dashboard layout.

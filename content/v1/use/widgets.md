@@ -2,7 +2,10 @@
 title: Widgets
 description: Configure Mozaïk widgets
 weight: 50
-menu: use-v1
+menu:
+  main:
+    identifier: use-v1-widgets
+    parent:     use-v1
 ---
 Widgets are the building blocks of a Mozaïk dashboard, a widget is in fact
 a react component which often communicates with an API.

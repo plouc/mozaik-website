@@ -2,7 +2,10 @@
 title: Hack
 description: A guide to develop your own Mozaïk extension
 weight: 10
-menu: hack-v1
+menu:
+  main:
+    identifier: hack-v1-index
+    parent:     hack-v1
 ---
 So that's it, you installed the [Mozaïk demo](https://github.com/plouc/mozaik-demo),
 installed and configured some [extensions]({{< relref "extensions/index.md" >}}) but you want your own

@@ -35,21 +35,8 @@ date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 future: true
 
-highlight:
-  enable:      true
-  line_number: false
-  auto_detect: true
-  tab_replace:
-
 per_page:       10
 pagination_dir: page
 
-theme: mozaik
-
 github:           plouc/mozaik
 google_analytics: UA-58405125-1
-
-deploy:
-  type:   git
-  repo:   git@github.com:plouc/mozaik.git
-  branch: gh-pages

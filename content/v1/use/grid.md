@@ -2,7 +2,10 @@
 title: Grid system
 description: Configure Mozaïk grid system
 weight: 30
-menu: use-v1
+menu:
+  main:
+    identifier: use-v1-grid
+    parent:     use-v1
 ---
 As we saw previously in the [config.js]({{< relref "v1/use/config.md" >}}) section,
 **Mozaïk** provides a simple way to define dashboard layout. Let's see how it works.
