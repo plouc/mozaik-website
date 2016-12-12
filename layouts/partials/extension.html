@@ -17,5 +17,11 @@
                 <a href="#{{ . }}" class="extension__tag">{{ . }}</a>
             {{ end }}
         </div>
+        <div class="extension__compat">
+            compatibility:
+            {{ range .compat }}
+                <span class="extension__compat__item">v{{ . }}</span>
+            {{ end }}
+        </div>
     </footer>
 </div>
