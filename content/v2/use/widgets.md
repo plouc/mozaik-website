@@ -25,9 +25,9 @@ Example:
 # ~/mozaik-demo/config.yml
 dashboards:
   - columns: 3
-    rows:    3
+    rows:    2
     widgets:
-      - type:    mozaik.inspector
+      - type:    ext.widget_type
         columns: 1
         rows:    1
         x:       0
@@ -35,3 +35,21 @@ dashboards:
 ```
 
 *for properties related to position/size see [grid system]({{< relref "v2/use/grid.md" >}}).*
+
+## Core widgets
+
+Mozaïk core extension provides an `inspector` widget, in order to use it,
+you should use this config:
+
+``` yaml
+# ~/mozaik-demo/config.yml
+dashboards:
+  - columns: 3
+    rows:    2
+    widgets:
+      - type:    mozaik.inspector
+        columns: 1
+        rows:    1
+        x:       0
+        y:       0
+```

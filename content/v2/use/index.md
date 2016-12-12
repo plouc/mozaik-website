@@ -4,6 +4,11 @@ description: Have Mozaïk V2 up and running in minutes
 weight: 10
 menu: use-v2
 ---
+
+This is the install guide for Mozaïk v2, be aware that this version
+is in alpha stage so you won't be able to use all extensions, you can check
+[extensions compatibility]({{< relref "extensions/index.md" >}}).
+
 ## Sample Repo
 
 The easiest way to get started is by using the [demo dashboard](https://github.com/plouc/mozaik-demo).<br />
@@ -55,4 +60,5 @@ yarn start
 ```
 
 **Mozaïk** can be configured through a simple yaml config file `config.yml` located at the root folder.
-You should start from the default config file and customize it to fit your needs.
+You should start from the default config file and
+[customize it to fit your needs]({{< relref "v2/use/config.md" >}}).
