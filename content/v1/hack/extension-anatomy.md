@@ -2,7 +2,7 @@
 title: Anatomy of an extension
 description: What's the structure of a Mozaïk extension
 weight: 20
-menu: developV1
+menu: hack-v1
 ---
 ## Directory layout
 

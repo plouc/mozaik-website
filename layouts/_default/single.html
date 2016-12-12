@@ -10,19 +10,7 @@
                     </div>
                 </div>
             </article>
-            {{ if isset .Params "menu" }}
-                {{ $currentNode := . }}
-                {{ $menu := .Params.menu }}
-                <aside class="sidebar" role="navigation">
-                    <nav>
-                        {{ range (index .Site.Menus $menu) }}
-                            <a href="{{ .URL }}" class="sidebar__link{{ if $currentNode.IsMenuCurrent $menu . }} _is-current{{ end }}">
-                                {{ .Name }}
-                            </a>
-                        {{ end }}
-                    </nav>
-                </aside>
-            {{ end }}
+            {{ partial "page_nav" . }}
         </div>
     </div>
 </div>

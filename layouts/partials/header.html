@@ -9,8 +9,19 @@
                 <a href="{{ .Site.BaseURL }}" class="header_logo">Mozaïk</a>
             </h1>
             <nav class="main-nav">
-                {{ range .Site.Menus.mainV1 }}
-                    <a href="{{ .URL }}" class="main-nav_item">{{ .Name }}</a>
+                {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                        <div class="dropdown">
+                            <span class="main-nav_item">{{ .Name }}</span>
+                            <div class="dropdown__content">
+                                {{ range .Children }}
+                                    <a href="{{ .URL }}" class="main-nav_item main-nav_item--sub">{{ .Name }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ else }}
+                        <a href="{{ .URL }}" class="main-nav_item">{{ .Name }}</a>
+                    {{ end }}
                 {{end}}
                 <a href="https://github.com/plouc/mozaik" target="_blank" class="main-nav_item">Github</a>
                 <a href="http://mozaik.herokuapp.com/" target="_blank" class="main-nav_item main-nav_item-demo">demo</a>

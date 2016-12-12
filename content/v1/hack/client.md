@@ -2,7 +2,7 @@
 title: Extension client
 description: How to craft connected widgets
 weight: 30
-menu: developV1
+menu: hack-v1
 ---
 
 ## When to use it

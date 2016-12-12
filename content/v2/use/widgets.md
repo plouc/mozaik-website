@@ -1,11 +1,13 @@
 ---
 title: Widgets
-baseline: Configure Mozaïk widgets
+description: Configure Mozaïk V2 widgets
 weight: 50
-menu: useV2
+menu: use-v2
 ---
-Widgets are the building blocks of a Mozaïk dashboard, a widget is in fact a react component which often communicates with an API.
-Mozaïk comes with just a few core widgets, others must be installed through extensions, see [available extensions](/extensions).
+Widgets are the building blocks of a Mozaïk dashboard, a widget is in fact
+a react component which often communicates with an API.
+Mozaïk comes with just a few core widgets, others must be installed through extensions,
+see [available extensions]({{< relref "extensions/index.md" >}}).
 
 Widgets share some common properties which are all required:
 
@@ -32,4 +34,4 @@ dashboards:
         y:       0
 ```
 
-*for properties related to position/size see [grid system](/v2/usage/grid-system.html).*
+*for properties related to position/size see [grid system]({{< relref "v2/use/grid.md" >}}).*

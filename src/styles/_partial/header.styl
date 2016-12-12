@@ -69,18 +69,45 @@ header-padding-max    = 30px
   @media mq-normal
     display flex
 
+.dropdown
+  position: relative
+
+.dropdown__content
+  display: none
+  top: 26px
+  position: absolute
+  background-color: #f9f9f9
+  min-width: 160px
+  padding: 6px 0
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.35)
+
+.dropdown:hover .dropdown__content
+  display: block
+
 .main-nav_item
-  color #fff
-  text-decoration none
-  font-family font-title
-  font-size   13px
-  font-weight 700
-  text-transform uppercase
-  padding 0 10px
-  transition all 200ms
+  color: #fff
+  cursor: pointer
+  text-decoration: none
+  font-family: font-title
+  font-size: 13px
+  font-weight: 700
+  text-transform: uppercase
+  padding: 7px 10px
+  display: block
+  line-height: 1em
+  //transition all 200ms
 
   &:hover
     color #fff
+
+  &--sub
+    color: color-default
+    text-transform: none
+    padding: 6px 15px
+    font-weight: 400
+
+    &:hover
+      color color-link
 
   &._is-active
     color #fff

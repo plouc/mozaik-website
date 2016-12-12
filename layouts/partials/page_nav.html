@@ -1,0 +1,34 @@
+<aside class="sidebar">
+    {{ if isset .Params "menu" }}
+        {{ $currentNode := . }}
+        {{ $menu := .Params.menu }}
+        <nav role="navigation">
+            {{ range (index .Site.Menus $menu) }}
+                <a href="{{ .URL }}" class="sidebar__link{{ if $currentNode.IsMenuCurrent $menu . }} _is-current{{ end }}">
+                    {{ .Name }}
+                </a>
+            {{ end }}
+        </nav>
+    {{ end }}
+    {{/*
+    {{ if isset .Params "mozaik_version" }}
+        {{ $current := .Params.mozaik_version }}
+        {{ if gt (len .Site.Params.mozaikVersions) 1 }}
+            <div class="versions">
+                <div class="versions__intro">
+                    You're currently browsing documentation
+                    for Mozaïk v{{ $current }}
+                </div>
+                <div class="versions__switch">
+                    switch to
+                    {{ range .Site.Params.mozaikVersions }}
+                        {{ if ne . $current }}
+                            <a href="">v{{ . }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+    */}}
+</aside>

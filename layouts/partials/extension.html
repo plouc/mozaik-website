@@ -1,11 +1,14 @@
 <div class="extension">
-    <div class="extension__name">
+    <div class="extension__header">
         <a href="{{ .link }}" class="extension__link" target="_blank">
             {{ .name }}
         </a>
-        <a href="https://www.npmjs.com/package/{{ .name }}" target="_blank">
+        <a class="extension__npm" href="https://www.npmjs.com/package/{{ .name }}" target="_blank">
             <img alt="{{ .name }} NPM version" src="https://img.shields.io/npm/v/{{ .name }}.svg?style=flat-square">
         </a>
+        {{ if .demo }}
+            <a class="extension__demo" href="{{ .demo }}" target="_blank">demo</a>
+        {{ end }}
     </div>
     <p class="extension__desc">{{ .description }}</p>
     <footer class="extension__footer">
@@ -14,8 +17,5 @@
                 <a href="#{{ . }}" class="extension__tag">{{ . }}</a>
             {{ end }}
         </div>
-        {{ if .demo }}
-            <a class="extension__demo" href="{{ .demo }}" target="_blank">demo</a>
-        {{ end }}
     </footer>
 </div>

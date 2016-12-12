@@ -13,31 +13,56 @@ sitemap:
   filename:   sitemap.xml
 
 menu:
-  mainV1:
-    - name:   Use
-      URL:    /v1/use/
-      weight: 10
+  main:
+    - name:       Use
+      identifier: use
+      weight:     10
 
-    - name:   Extend
-      URL:    /extensions/
-      weight: 20
+    - name:       Mozaik v1 (stable)
+      identifier: use-v1
+      URL:        /v1/use/
+      parent:     use
 
-    - name:   Theme
-      URL:    /themes/
-      weight: 30
+    - name:       Mozaik v2 (latest)
+      identifier: use-v2
+      URL:        /v2/use/
+      parent:     use
 
-    - name:   Hack
-      URL:    /v1/hack/
-      weight: 40
+    - name:       Extend
+      identifier: extend
+      URL:        /extensions/
+      weight:     20
 
-    - name:   News
-      URL:    /news/
-      weight: 50
+    - name:       Theme
+      identifier: themes
+      URL:        /themes/
+      weight:     30
+
+    - name:       Hack
+      identifier: hack
+      weight:     40
+
+    - name:       Mozaik v1 (stable)
+      identifier: hack-v1
+      URL:        /v1/hack/
+      parent:     hack
+
+    #- name:       Mozaik v2 (latest)
+    #  identifier: hack-v2
+    #  URL:        /v2/hack/
+    #  parent:     hack
+
+    - name:       News
+      identifier: news
+      URL:        /news/
+      weight:     50
 
 params:
-  Subtitle: "Spinning the cogs in the widgets"
   AuthorName: "Raphaël Benitte"
   GitHubUser: "plouc"
+
+  mozaikVersions:       [1, 2]
+  mozaikCurrentVersion: 1
 
   references:
     - image: jolicode.svg

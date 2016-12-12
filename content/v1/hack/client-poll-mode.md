@@ -2,7 +2,7 @@
 title: Extension client [poll mode]
 description: How to feed your hungry widgets by regularly fetching some external API data
 weight: 40
-menu: developV1
+menu: hack-v1
 ---
 If you didn't read the [intro]({{< relref "v1/hack/client.md" >}}) on Mozaïk extension clients,
 then you should consider [reading it first]({{< relref "v1/hack/client.md" >}}).

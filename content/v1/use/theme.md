@@ -2,7 +2,7 @@
 title: Theme
 description: Configure Mozaïk theme
 weight: 40
-menu: useV1
+menu: use-v1
 ---
 ## Configuration
 

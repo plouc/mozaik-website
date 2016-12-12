@@ -2,7 +2,7 @@
 title: Automated extension demo
 description: How to automatically publish a demo of your Mozaïk extension (for free)
 weight: 60
-menu: developV1
+menu: hack-v1
 ---
 The best way to promote your brand new Mozaïk extension is to provide a
 [demo](http://mozaik.herokuapp.com/) for it.

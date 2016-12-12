@@ -1,8 +1,8 @@
 ---
 title: Configuration
-baseline: Configure Mozaïk
+description: Configure Mozaïk V2
 weight: 20
-menu: useV2
+menu: use-v2
 ---
 **config.yml** is the main **Mozaïk** config, it's where you configure your dashboards.
 It should be located at the root of your main **Mozaïk** project directory.

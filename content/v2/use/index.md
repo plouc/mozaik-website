@@ -1,63 +1,58 @@
 ---
 title: Getting started
-baseline: Have Mozaïk up and running in minutes
+description: Have Mozaïk V2 up and running in minutes
 weight: 10
-menu: useV2
+menu: use-v2
 ---
 ## Sample Repo
 
-The easiest way to get started is by using the [demo dashboard](https://github.com/plouc/mozaik-demo).
+The easiest way to get started is by using the [demo dashboard](https://github.com/plouc/mozaik-demo).<br />
+For now Mozaïk stable version is V1, in order to install V2 you must use the dedicated branch.
 
-### Clone the repo
-
-```bash
+``` bash
 git clone git@github.com:plouc/mozaik-demo.git
+git checkout mozaik-2
 ```
 
-### Install packages
+### Install packages & publish assets
 
-```bash
+``` bash
 cd mozaik-demo
+# using npm
 npm install
+# or yarn
+yarn install
 ```
 
-### Publish assets (js/css)
+If for some reason the install command fails, the asset generation should be skipped,
+you can re-run it with:
 
-```bash
-gulp build
+``` bash
+# using npm
+npm run build
+# or yarn
+yarn build
 ```
 
 ### Add github tokens in a `.env` file
 
 This step is optional, it's useful if you want to bypass github api rate limit.
+You have to generate a token for your dashboard from your GitHub account,
+and then set the appropriate var for `mozaik-ext-github` which is installed by default.
 
-```
+``` bash
+# ./.env
 GITHUB_API_TOKEN=xxxxx
 ```
 
 ### Run the app
 
 ```bash
-node app.js
+# using npm
+npm start
+# or yarn
+yarn start
 ```
 
-## Yeoman generator
-
-Alternatively, use provided [Yeoman generator][yo-generator-url] available to start with new dashboard or widget:
-
-``` sh
-npm install -g yo gulp generator-mozaik
-yo mozaik
-npm install
-gulp build
-node app.js
-```
-
-**Mozaïk** can be configured through a simple js config file `config.js` located at the root folder.
+**Mozaïk** can be configured through a simple yaml config file `config.yml` located at the root folder.
 You should start from the default config file and customize it to fit your needs.
-
-## Docker
-
-*coming soon*
-
-[yo-generator-url]: https://www.npmjs.com/package/generator-mozaik
