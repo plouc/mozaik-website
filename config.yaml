@@ -65,17 +65,21 @@ params:
   mozaikCurrentVersion: 1
 
   references:
-    - image: jolicode.svg
+    - image: refs/jolicode.svg
       link:  http://jolicode.com/
       label: JoliCode
 
-    - image: canalplus.png
+    - image: refs/canalplus.png
       link:  http://canalplus.github.io/
       label: Canal+
 
-    - image: aptus-health.png
+    - image: refs/aptus-health.png
       link:  http://www.aptushealth.com/
       label: Aptus Health
+
+    - image: refs/sc5.png
+      link:  https://sc5.io/
+      label: SC5
 
   useCases:
     - title: Mozaïk meets Apache Spark, Rock-Paper-Scissors!

@@ -6,7 +6,7 @@ menu: use-v2
 ---
 
 This is the install guide for Mozaïk v2, be aware that this version
-is in alpha stage so you won't be able to use all extensions, you can check
+is in **alpha stage** so you won't be able to use all extensions, you can check
 [extensions compatibility]({{< relref "extensions/index.md" >}}).
 
 ## Sample Repo
